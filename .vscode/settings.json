@@ -1,0 +1,30 @@
+{
+    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-25",
+            "path": "/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home",
+        }
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "build/": true,
+        "dist/": true
+    },
+       "local-tomcat.tomcatInstances": [
+    {
+            "name": "tomcat",
+            "catalinaHome": "/Users/ccs/projects/tomcat/output/build",
+            "javaHome": "/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home",
+            "port": 80,
+            "deploymentPort": 80,
+    }
+    ],
+    "local-tomcat.warDir": "target",
+    "local-tomcat.autoPublish": true,
+    "local-tomcat.showServerLogs": true,
+    "local-tomcat.terminalMode": false,
+    "maven.view": "hierarchical",
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
