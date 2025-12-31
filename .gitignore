@@ -3,6 +3,7 @@
 # Don't grab the .vscode directory
 .vscode
 *.DS_Store
+target/
 
 # Log file
 *.log
