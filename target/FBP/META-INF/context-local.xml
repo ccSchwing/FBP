@@ -1,0 +1,7 @@
+<Context>
+
+  <ResourceLink name="jdbc/FBP" 
+  			auth="Container"      
+        global="jdbc/FBP" 
+        type="javax.sql.DataSource" />  
+</Context>
