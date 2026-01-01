@@ -50,7 +50,7 @@
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-            <version>3.1.0-M1</version>
+            <version>3.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -61,11 +61,6 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
             <version>2.14.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.ee4j</groupId>
-            <artifactId>project</artifactId>
-            <version>2.0.0-M1</version>
         </dependency>
 
     </dependencies>
