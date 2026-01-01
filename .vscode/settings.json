@@ -26,5 +26,5 @@
     "local-tomcat.showServerLogs": true,
     "local-tomcat.terminalMode": false,
     "maven.view": "hierarchical",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
