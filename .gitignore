@@ -4,6 +4,17 @@
 # Log file
 *.log
 
+# .github exclusions
+workflows/*-workspace
+
+# .vscode exclusions
+.vscode/
+
+#
+WebContent/.DS_Store
+
+target/
+
 # BlueJ files
 *.ctxt
 
