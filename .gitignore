@@ -11,9 +11,10 @@ workflows/*-workspace
 .vscode/
 
 #
-WebContent/.DS_Store
+.DS_Store
 
 target/
+*.war
 
 # BlueJ files
 *.ctxt
