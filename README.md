@@ -15,7 +15,7 @@ A JavaServer Pages (JSP) web application project template for building dynamic w
 ## Project Structure
 
 ```
-jsp-src/
+FBP/
 ├── src/                           # Java source code (servlets, beans)
 ├── WebContent/                    # Web application root
 │   ├── WEB-INF/
@@ -36,7 +36,7 @@ jsp-src/
 ### 1. Build the Project
 
 ```bash
-ant build
+mvn clean install ; cp target/*.war $TOMCAT_HOME/webapps
 ```
 
 This will compile Java sources and create a WAR file in the `dist/` directory.
@@ -44,10 +44,10 @@ This will compile Java sources and create a WAR file in the `dist/` directory.
 ### 2. Deploy to Tomcat
 
 ```bash
-ant deploy
+cp target/*.war $TOMCAT_HOME/webapps
 ```
 
-Or manually copy `dist/jsp-src.war` to `$CATALINA_HOME/webapps/`
+Or manually copy `dist/FBP.war` to `$CATALINA_HOME/webapps/`
 
 ### 3. Start Tomcat
 
@@ -57,7 +57,7 @@ $CATALINA_HOME/bin/startup.sh
 
 ### 4. Access the Application
 
-Open your browser and navigate to: `http://localhost:8080/jsp-src`
+Open your browser and navigate to: `https://localhost/FBP`
 
 ## Development
 
@@ -86,13 +86,6 @@ Open your browser and navigate to: `http://localhost:8080/jsp-src`
     <url-pattern>/hello</url-pattern>
 </servlet-mapping>
 ```
-
-## Useful Ant Targets
-
-- `ant build` - Compile and package the application
-- `ant deploy` - Deploy WAR to Tomcat
-- `ant clean` - Remove build artifacts
-- `ant rebuild` - Clean and rebuild
 
 ## Troubleshooting
 
