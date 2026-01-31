@@ -13,8 +13,10 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+        <!-- <maven.compiler.release>25</maven.compiler.release> -->
+        <aws.java.sdk.version>2.41.13</aws.java.sdk.version>
+            <maven.compiler.source>25</maven.compiler.source>
+            <maven.compiler.target>25</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -62,9 +64,47 @@
             <artifactId>commons-dbcp2</artifactId>
             <version>2.14.0</version>
         </dependency>
+<dependency>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk-lambda</artifactId>
+    <version>1.11.207</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+        <groupId>org.codehaus.janino</groupId>
+        <artifactId>janino</artifactId>
+        <version>2.6.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.2</version>
+        <scope>runtime</scope>
+    </dependency>
 
     </dependencies>
-
+  <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>software.amazon.awssdk</groupId>
+          <artifactId>bom</artifactId>
+          <version>${aws.java.sdk.version}</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpcore</artifactId>
+          <version>4.4.16</version>
+        </dependency>
+        <dependency>
+          <groupId>commons-codec</groupId>
+          <artifactId>commons-codec</artifactId>
+          <version>1.17.1</version>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
 
     <build>
         <finalName>FBP</finalName>
@@ -73,11 +113,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.14.1</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <source>25</source>
+                    <target>25</target>
+                    <!-- <release>${maven.compiler.release}</release> -->
+                    <!-- <encoding>${project.build.sourceEncoding}</encoding> -->
                 </configuration>
             </plugin>
 

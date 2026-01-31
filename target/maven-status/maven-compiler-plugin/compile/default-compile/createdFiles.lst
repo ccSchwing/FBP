@@ -1,5 +1,7 @@
 com/planb/servlets/AddUpdateUserServlet.class
-com/planb/utils/FBPUtils.class
+com/fbp/objects/Order.class
 com/planb/servlets/FBPLogin.class
 com/planb/utils/FBPUser.class
+com/planb/utils/FBPUtils.class
+com/fbp/lambdaclient/LambdaInvoker.class
 com/planb/servlets/FBPValidateRegData.class
