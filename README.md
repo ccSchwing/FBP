@@ -26,7 +26,7 @@ FBP/
 │   ├── index.jsp                 # Home page
 │   └── sample.jsp                # Sample JSP page
 ├── build/                        # Compiled classes (generated)
-├── dist/                         # Packaged WAR file (generated)
+├── target/                       # Packaged WAR file (generated)
 ├── build.xml                     # Ant build script
 └── README.md                     # This file
 ```
@@ -39,7 +39,7 @@ FBP/
 mvn clean install ; cp target/*.war $TOMCAT_HOME/webapps
 ```
 
-This will compile Java sources and create a WAR file in the `dist/` directory.
+This will compile Java sources and create a WAR file in the `target/` directory.
 
 ### 2. Deploy to Tomcat
 
@@ -47,7 +47,7 @@ This will compile Java sources and create a WAR file in the `dist/` directory.
 cp target/*.war $TOMCAT_HOME/webapps
 ```
 
-Or manually copy `dist/FBP.war` to `$CATALINA_HOME/webapps/`
+Or manually copy `target/FBP.war` to `$CATALINA_HOME/webapps/`
 
 ### 3. Start Tomcat
 
