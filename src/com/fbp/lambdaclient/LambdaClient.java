@@ -10,7 +10,7 @@ import com.amazonaws.services.lambda.AWSLambdaAsyncClientBuilder;
 import com.amazonaws.services.lambda.model.InvokeRequest;
 import com.amazonaws.services.lambda.model.InvokeResult;
 
-class LambdaInvoker {
+public class LambdaClient {
 
     public void runWithoutPayload(String region, String functionName) {
         runWithPayload(region, functionName, null);
@@ -20,12 +20,13 @@ class LambdaInvoker {
         AWSLambdaAsync client = AWSLambdaAsyncClientBuilder.standard()
             .withRegion(Regions.fromName(region))
             .build();
-
         InvokeRequest request = new InvokeRequest()
+            .withInvocationType("RequestResponse")
             .withFunctionName(functionName)
             .withPayload(payload);
-            
+        System.out.println("Invoking " + functionName + " with payload " + payload);
+        System.out.println("Request: " + request);    
         InvokeResult invoke = client.invoke(request);
-        System.out.println("Result invoking " + functionName + ": " + invoke);
+        System.out.println("Result invoking " + functionName + ": " + invoke.toString());
     }
 }

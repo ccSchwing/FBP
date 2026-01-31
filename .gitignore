@@ -2,7 +2,7 @@
 *.class
 # Don't grab the .vscode directory
 .vscode
-*.DS_Store
+**/.DS_Store
 target/
 
 # Log file
@@ -15,7 +15,6 @@ workflows/*-workspace
 .vscode/
 
 #
-.DS_Store
 
 target/
 *.war
